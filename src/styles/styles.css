@@ -1,0 +1,27 @@
+.top-item {
+  width: 100%;
+  background-color: transparent !important;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px !important;
+  display: inline-block !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  border-radius: 3px !important;
+}
+.top-item-content {
+  display: table;
+}
+.background-top-item {
+  display: table-cell;
+  background-image: url("../images/background-top-item.jpg");
+  width: 96px;
+  height: 72px;
+}
+.title-item-content {
+  display: table-cell;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

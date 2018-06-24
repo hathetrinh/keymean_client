@@ -1,0 +1,83 @@
+img {
+  width: 100%;
+}
+/* header start */
+/* header end */
+
+/* footer start */
+#footer {
+  padding: 48px 0;
+}
+
+#footer .footer-content {
+  padding: 24px 0;
+}
+
+#footer .footer-content-links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer .copyright {
+  border-top: 1px solid rgb(228, 228, 228);
+  padding-top: 24px;
+}
+/* footer end */
+
+.listing-container .list-title h2 {
+  margin: 0;
+}
+
+.listing-sidebar ul {
+  list-style-type: none;
+}
+.listing-sidebar ul li a {
+  display: block;
+  padding: 6px 0;
+  font-size: 16px;
+  color: #767676;
+}
+
+.list-item {
+  margin-top: 24px;
+  margin-bottom: 24px;
+
+  box-shadow: rgb(242, 242, 242) 0px 2px 5px 0px !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: rgb(228, 228, 228) !important;
+  border-image: initial !important;
+  border-radius: 4px !important;
+}
+
+.course-content {
+  border-bottom: 1px solid rgb(228, 228, 228) !important;
+  padding: 24px;
+}
+
+.course-action {
+  margin: 16px 24px;
+}
+
+.course-action ul {
+  margin: 0;
+  padding: 0;
+}
+
+.course-action ul li {
+  display: inline;
+  margin-right: 24px;
+}
+
+.course-detail-item .cover-photo {
+  height: 350px;
+}
+
+.course-detail-item .cover-photo img{
+  height: 100%;
+}
+
+.course-detail-item .course-photo {
+  height: 300px;
+}
