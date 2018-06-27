@@ -45,7 +45,7 @@ class Header extends React.Component {
           </div>
           {/* /navbar-header */}
           <form className="navbar-form navbar-left" role="search">
-            <div className>
+            <div>
               <div className="input-group">
                 <span className="input-group-btn">
                   <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false" style={{ height: 24, width: 24, display: 'block', fill: 'rgb(118, 118, 118)' }}>

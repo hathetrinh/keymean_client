@@ -30,7 +30,6 @@ export const getDataFail = () => {
 }
 
 export const createRequest = (params) => {
-  debugger
   return { type: STUDENT_CREATE_REQUEST, payload: { params } }
 }
 
