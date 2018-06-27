@@ -32,26 +32,18 @@ function* getData(params) {
 }
 
 function* create(params) {
-  debugger
   try {
-    const { data } = yield call(client().post, API_CREATE, params, {});
-
+    const { data } = yield call(client().post, API_CREATE, params.payload.params, {});
     yield put(actions.createSuccess(data))
-    yield put(push('/traffic'))
+    yield put(push('/admin'))
     yield put(notification.success(
       message({
         title: 'User',
         content: 'Create success'
       })
     ))
-
   } catch (e) {
-    yield put(notification.error(
-      message({
-        title: 'User',
-        content: 'User create failed'
-      })
-    ))
+    console.log(`Create user server Error: ${e}`)
   }
 }
 

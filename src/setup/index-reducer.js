@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 import { reducer as form } from 'redux-form';
+import { routerReducer } from 'react-router-redux'
 
 import { resolveBrowserLocale as langBrowser }  from 'i18n/TranslationUtils';
 import localeReducer from 'i18n/Reducers';
@@ -18,6 +19,7 @@ const IndexReducer = combineReducers({
   loading,
   student,
   course,
+  routing: routerReducer,
 });
 
 export default IndexReducer;

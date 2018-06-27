@@ -2,16 +2,18 @@ import React from 'react'
 
 import Header from './Header';
 import Footer from './Footer';
+import Notifications from './notification/Notifications';
 
 class LayoutMain extends React.Component {
 
   render(){
     return (
-      <div>
+      <React.Fragment>
         <Header />
-          {this.props.children}
+        {this.props.children}
         <Footer />
-      </div>
+        <Notifications />
+      </React.Fragment>
     );
   }
 }

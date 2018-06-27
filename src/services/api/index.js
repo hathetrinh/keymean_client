@@ -1,9 +1,12 @@
 import axios from 'axios';
-import { store } from '../../';
+import { store } from '../../Store';
 
 import config from 'services/config';
 // import { API_BASE, ACCESSTOKEN_VALUE_PREFIX } from './constants';
-import {startLoading, endLoading} from '../../loading/Actions'
+import { startLoading, endLoading } from '../../loading/Actions'
+
+import { message } from '../../components/notification/Message'
+import * as notification from '../../components/notification/Actions'
 // import { errorHandler } from './handleError';
 
 // const DEFAULT_CONFIG = {
@@ -58,6 +61,12 @@ const client = (hasSetLoadingPage = true) => {
         // removeCurrentUser()
         window.location.href = '/login'
       } else {
+        store.dispatch(notification.error(
+          message({
+            title: 'server Error',
+            content: err.request.responseText
+          })
+        ))
         console.log(`server Error: ${ err}`)
       }
     });

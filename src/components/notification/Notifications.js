@@ -13,7 +13,7 @@ class Notifications extends React.Component {
   }
 
   componentWillReceiveProps (nextProps) {
-    const {notifications, translate, hide} = nextProps
+    const {notifications, hide} = nextProps
     let notificationIds
     const systemNotifications = this.system().state.notifications || []
     if (notifications && notifications.length > 0) {

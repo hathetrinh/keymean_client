@@ -53,11 +53,11 @@ class Admin extends Component {
             </div>
           </div>
           <Route exact path={`${match.path}`} component={Courses} />
-          <Route path={`${match.path}/reservations`} component={Reservations} />
-          <Route path={`${match.path}/class`} component={Class} />
-          <Route path={`${match.path}/students`} component={Students} />
-          <Route path={`${match.path}/news`} component={News} />
-          <Route path={`${match.path}/exercises`} component={Exercises} />
+          <Route exact path={`${match.path}/reservations`} component={Reservations} />
+          <Route exact path={`${match.path}/class`} component={Class} />
+          <Route exact path={`${match.path}/students`} component={Students} />
+          <Route exact path={`${match.path}/news`} component={News} />
+          <Route exact path={`${match.path}/exercises`} component={Exercises} />
         </div>
       </div>
     );
