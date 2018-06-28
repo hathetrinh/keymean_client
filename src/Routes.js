@@ -11,7 +11,7 @@ import Home from 'feature/Home'
 import Admin from 'feature/Admin'
 import StudentCreate from 'feature/Admin/Students/Create'
 import CourseCreate from 'feature/Admin/Courses/CreateCourse'
-
+import ClassCreate from 'feature/Admin/Class/Create'
 
 const routes = (
   <Provider store={store}>
@@ -21,6 +21,7 @@ const routes = (
           <PrivateRoute exact={true} path='/' component={Home} />
           <PrivateRoute exact={true} path='/admin/students/create' component={StudentCreate} />
           <PrivateRoute exact={true} path='/admin/courses/create' component={CourseCreate} />
+          <PrivateRoute exact={true} path='/admin/class/create' component={ClassCreate} />
           <PrivateRoute path='/admin' component={Admin} />
           <Redirect to="/" />
           <Route component={Admin} />

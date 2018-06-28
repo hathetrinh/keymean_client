@@ -8,7 +8,7 @@ import student from '../feature/Admin/Students/Reducer'
 import notifications from '../components/notification/Reducer'
 import loading from '../loading/Reducer'
 import course from '../feature/Admin/Courses/Reducer'
-
+import classE from '../feature/Admin/Class/Reducer'
 
 let locale = (langBrowser === 'en' || langBrowser === 'jp') ? langBrowser : 'jp'
 
@@ -20,6 +20,7 @@ const IndexReducer = combineReducers({
   student,
   course,
   routing: routerReducer,
+  classE,
 });
 
 export default IndexReducer;
