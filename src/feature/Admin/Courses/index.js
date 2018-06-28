@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import { getDataRequest } from './Actions'
 
@@ -20,6 +21,11 @@ class Courses extends Component {
             <h2>
               Danh sách khóa học
             </h2>
+          </div>
+          <div>
+            <Link to='/admin/courses/create'>
+              Add course
+            </Link>
           </div>
           <div className="list-container">
             {/* course-item */}
