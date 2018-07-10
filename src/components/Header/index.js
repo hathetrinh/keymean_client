@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap'
 
 
 class Header extends React.Component {
@@ -31,85 +32,45 @@ class Header extends React.Component {
   render() {
     return (
       <div id="header">
-        {/* navbar navbar-default */}
-        <div className="navbar navbar-default" role="navigation">
-          {/* navbar-header */}
-          <div className="navbar-header">
-            <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span className="sr-only">Toggle navigation</span>
-              <span className="icon-bar" />
-              <span className="icon-bar" />
-              <span className="icon-bar" />
-            </button>
-            <a href="/" className="navbar-brand">Keymeans</a>
-          </div>
-          {/* /navbar-header */}
-          <form className="navbar-form navbar-left" role="search">
-            <div>
-              <div className="input-group">
-                <span className="input-group-btn">
-                  <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false" style={{ height: 24, width: 24, display: 'block', fill: 'rgb(118, 118, 118)' }}>
-                    <path d="m10.4 18.2c-4.2-.6-7.2-4.5-6.6-8.8.6-4.2 4.5-7.2 8.8-6.6 4.2.6 7.2 4.5 6.6 8.8-.6 4.2-4.6 7.2-8.8 6.6m12.6 3.8-5-5c1.4-1.4 2.3-3.1 2.6-5.2.7-5.1-2.8-9.7-7.8-10.5-5-.7-9.7 2.8-10.5 7.9-.7 5.1 2.8 9.7 7.8 10.5 2.5.4 4.9-.3 6.7-1.7v.1l5 5c .3.3.8.3 1.1 0s .4-.8.1-1.1" fillRule="evenodd" />
-                  </svg>
-                </span>
-                <input type="text" className="form-control" placeholder="Search for..." />
-              </div>
-            </div>
-          </form>
-          {/* navbar */}
-          <div className="navbar-collapse collapse">
-            <ul className="nav navbar-nav">
-              <li>
-                <a href="">Link</a>
-              </li>
-              <li>
-                <a href="">Link</a>
-              </li>
-              <li>
-                <a href="">Link</a>
-              </li>
-              <li>
-                <a href="">Link</a>
-              </li>
-              <li>
-                <a href="">Link</a>
-              </li>
-            </ul>
-            <ul className="nav navbar-nav navbar-right">
-              <li>
-                <a href="">
-                  <span className="glyphicon glyphicon-user" /> Sign Up</a>
-              </li>
-              <li>
-                <a href="">
-                  <span className="glyphicon glyphicon-log-in" /> Login</a>
-              </li>
-              <li className={`dropdown ${this.state.toggleProfile && 'open' }`}>
-                <a
-                  className="dropdown-toggle"
-                  data-toggle="dropdown"
-                  onClick={this.handleClickToggle}
-                >
-                  Avatar
-                  <span className="caret" />
-                </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <a href="">Thông tin cá nhân</a>
-                  </li>
-                  <li>
-                    <a href="/admin">Chuyển tới trang admin</a>
-                  </li>
-                  <li>
-                    <a href="">Đăng xuất</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          {/* /navbar */}
-        </div>
-        {/* /navbar navbar-default */}
+       <Navbar collapseOnSelect>
+        <Navbar.Header>
+          <Navbar.Brand>
+            <a href="#brand">Logo</a>
+          </Navbar.Brand>
+          <Navbar.Toggle />
+        </Navbar.Header>
+        <Navbar.Collapse>
+          <Nav>
+            <NavItem fluid eventKey={1} href="#">
+              Home
+            </NavItem>
+            <NavItem eventKey={2} href="#">
+              Classes
+            </NavItem>
+            <NavItem eventKey={2} href="#">
+              Students
+            </NavItem>
+            <NavDropdown eventKey={3} title="Courses" id="basic-nav-dropdown">
+              <MenuItem eventKey={3.1}>Course 1</MenuItem>
+              <MenuItem eventKey={3.2}>Course 2</MenuItem>
+              <MenuItem eventKey={3.3}>Course 3</MenuItem>
+              <MenuItem divider />
+              <MenuItem eventKey={3.3}>Separated link</MenuItem>
+            </NavDropdown>
+            <NavItem eventKey={4} href="#">
+              Exercises
+            </NavItem>
+          </Nav>
+          <Nav pullRight>
+            <NavItem eventKey={1} href="#">
+              Register
+            </NavItem>
+            <NavItem eventKey={2} href="#">
+              Login
+            </NavItem>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>;
       </div>
     )
   }
